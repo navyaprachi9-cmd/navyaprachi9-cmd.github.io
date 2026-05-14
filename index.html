@@ -31,6 +31,20 @@ img {
   75% { transform: rotate(5deg) scale(1.05); }
   100% { transform: rotate(0deg) scale(1); }
 }
+button {
+  background: black;
+  color: white;
+  border: 2px solid hotpink;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: hotpink;
+  transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -42,6 +56,8 @@ img {
   <div class="container">
     <img src="navya.jpg" class="profile-pic" alt="Navya Queen">
     <h1>👑 Navya Queen 👑</h1>
+    <button onclick="document.body.style.background='linear-gradient(45deg, #ff9a9e, #fad0c4)'">Gulaabi Karo</button>
+    <button onclick="document.body.style.background='linear-gradient(45deg, #a1c4fd, #c2e9fb)'">Neela Karo</button>
     <p>Welcome to my website 💚</p>
   </div>
 </body>
