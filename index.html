@@ -48,18 +48,18 @@ button:hover {
     </style>
 </head>
 <body>
-<!-- DHUN SONG IN HINDI-->
-<audio controls loop style="position:fixed; bottom:20px; right:20px; z-index:999;">
+<h1 id="typewriter"></h1>
+<p id="clock"></p>
+<p>Welcome to my website ✨</p>
+<img src="https://i.ibb.co/4M0dX6K/navya.jpg" alt="Navya Queen">
+<br>
+<button onclick="document.body.style.background = 'hotpink'">Gulaabi Karo 💖</button>
+<button onclick="document.body.style.background = 'skyblue'">Neela Karo 💙</button>
+<button onclick="startConfetti()">Party Karo 🎉</button>
+<audio autoplay loop>
   <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
 </audio>
-
-  <div class="container">
-    <img src="navya.jpg" class="profile-pic" alt="Navya Queen">
-    <h1 id="typewriter"></h1>
-    <button onclick="document.body.style.background='linear-gradient(45deg, #ff9a9e, #fad0c4)'">Gulaabi Karo</button>
-    <button onclick="document.body.style.background='linear-gradient(45deg, #a1c4fd, #c2e9fb)'">Neela Karo</button>
-    <p>Welcome to my website 💚</p>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 <script>
 let i = 0;
 let txt = '👑 Navya Queen 👑';
@@ -71,5 +71,19 @@ function typeWriter() {
   }
 }
 typeWriter();
+
+function showTime(){
+  document.getElementById('clock').innerHTML = new Date().toLocaleTimeString();
+  setTimeout(showTime, 1000);
+}
+showTime();
+
+function startConfetti() {
+  confetti({
+    particleCount: 150,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+}
 </script>
 </body>
