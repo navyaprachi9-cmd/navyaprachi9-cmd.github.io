@@ -55,9 +55,21 @@ button:hover {
 
   <div class="container">
     <img src="navya.jpg" class="profile-pic" alt="Navya Queen">
-    <h1>👑 Navya Queen 👑</h1>
+    <h1 id="typewriter"></h1>
     <button onclick="document.body.style.background='linear-gradient(45deg, #ff9a9e, #fad0c4)'">Gulaabi Karo</button>
     <button onclick="document.body.style.background='linear-gradient(45deg, #a1c4fd, #c2e9fb)'">Neela Karo</button>
     <p>Welcome to my website 💚</p>
   </div>
+<script>
+let i = 0;
+let txt = '👑 Navya Queen 👑';
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typewriter").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, 150);
+  }
+}
+typeWriter();
+</script>
 </body>
